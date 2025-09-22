@@ -29,7 +29,4 @@ layout: default
   </div>
   {%- endif -%}
 
-  <div class="text-center mt-4">
-    <p><a href="{{ "/feed.xml" | relative_url }}">Subscribe via RSS</a></p>
-  </div>
 </div>

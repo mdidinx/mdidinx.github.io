@@ -29,6 +29,25 @@
             </svg>
           </a>
         </div>
+        <div class="subscribe-section">
+          <p>Get notified when new posts are published</p>
+          <form class="email-subscription-form" action="https://formspree.io/f/xovkapbg" method="POST">
+            <div class="email-input-group">
+              <input type="email" name="email" placeholder="Enter your email address" required class="email-input">
+              <button type="submit" class="subscribe-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.4.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                Subscribe
+              </button>
+            </div>
+            <input type="hidden" name="_subject" value="New subscription to Weekly Cloud Blog">
+            <input type="hidden" name="_replyto" value="">
+            <input type="hidden" name="_next" value="http://127.0.0.1:4001/thank-you/">
+            <input type="text" name="_gotcha" style="display:none">
+          </form>
+          <small class="subscription-note">No spam, unsubscribe anytime</small>
+        </div>
       </div>
     </div>
 
