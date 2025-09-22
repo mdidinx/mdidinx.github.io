@@ -1,0 +1,44 @@
+title: Weekly Cloud Blog
+email: your-email@example.com
+description: >-
+  A blog about cloud technologies, insights, and weekly updates
+  from the cloud computing world.
+baseurl: ""
+url: "https://weeklycloud.blog"
+
+# SEO and social settings
+author: Weekly Cloud
+social:
+  name: Weekly Cloud
+  links:
+    - https://github.com/mdidinx
+
+twitter_username: your_twitter
+github_username: mdidinx
+
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Weekly Cloud"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

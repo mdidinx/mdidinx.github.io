@@ -1,0 +1,48 @@
+<header class="site-header" role="banner">
+  <div class="container">
+    <div class="header-content">
+      <a class="site-logo" rel="author" href="{{ "/" | relative_url }}">
+        <span class="logo-icon">☁</span>
+        <span class="logo-text">
+          <span class="logo-weekly">Weekly</span>
+          <span class="logo-cloud">Cloud</span>
+        </span>
+      </a>
+
+      <nav class="site-nav">
+        <a href="{{ "/" | relative_url }}">Home</a>
+
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Posts <span class="arrow">▼</span></a>
+          <div class="dropdown-menu">
+            {%- assign sorted_posts = site.posts | sort: 'date' | reverse -%}
+            {%- for post in sorted_posts limit: 10 -%}
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {%- endfor -%}
+            <a href="{{ "/posts/" | relative_url }}" class="view-all">View All Posts</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Weekly News <span class="arrow">▼</span></a>
+          <div class="dropdown-menu">
+            {%- assign weekly_posts = site.posts | where_exp: "post", "post.categories contains 'weekly'" | sort: 'date' | reverse -%}
+            {%- for post in weekly_posts limit: 8 -%}
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            {%- endfor -%}
+            {%- if weekly_posts.size == 0 -%}
+            <span class="no-posts">No weekly posts yet</span>
+            {%- else -%}
+            <a href="{{ "/weekly/" | relative_url }}" class="view-all">View All Weekly News</a>
+            {%- endif -%}
+            {%- if weekly_posts.size == 0 -%}
+            <a href="{{ "/weekly/" | relative_url }}" class="view-all">About Weekly News</a>
+            {%- endif -%}
+          </div>
+        </div>
+
+        <a href="{{ "/about/" | relative_url }}">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
