@@ -404,6 +404,26 @@ p {
       color: #ecf0f1;
       font-weight: 600;
     }
+
+    .resume-button {
+      display: inline-block;
+      background: #3498db;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      margin-bottom: 5px;
+
+      &:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        text-decoration: none;
+      }
+    }
   }
 
   .social-links {
@@ -699,6 +719,424 @@ p {
         }
       }
     }
+  }
+}
+
+// Resume Page Styles
+.resume-page {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.resume-header {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: #ffffff;
+  padding: 40px;
+
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .profile-image {
+    .avatar-placeholder {
+      width: 120px;
+      height: 120px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .profile-info {
+    flex: 1;
+
+    .name {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #ffffff;
+      }
+
+      &.resume-link {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        font-weight: 600;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.3);
+          transform: translateY(-1px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+.download-section {
+  text-align: center;
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e1e8ed;
+
+  .download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+
+    &:hover {
+      background: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(52, 152, 219, 0.3);
+      text-decoration: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  }
+}
+
+.resume-content {
+  padding: 40px;
+}
+
+.resume-section {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+
+  .section-content {
+    p {
+      color: #34495e;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// Skills Section
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.skill-category {
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 12px;
+  }
+
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #3498db;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+// Experience Section
+.experience-item {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ecf0f1;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .experience-header {
+    margin-bottom: 15px;
+
+    .job-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .company {
+      font-size: 16px;
+      font-weight: 600;
+      color: #3498db;
+      margin-right: 15px;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #7f8c8d;
+      background: #f8f9fa;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+  }
+
+  .location {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+
+  .responsibilities {
+    list-style: none;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      color: #34495e;
+      line-height: 1.6;
+
+      &:before {
+        content: "▶";
+        position: absolute;
+        left: 0;
+        color: #3498db;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// Education Section
+.education-item {
+  .education-header {
+    margin-bottom: 10px;
+
+    .degree {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    .school {
+      font-size: 16px;
+      color: #3498db;
+      margin-right: 15px;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #7f8c8d;
+      background: #f8f9fa;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+  }
+
+  .education-details {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+// Certifications Section
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.certification-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+  }
+
+  .cert-date {
+    font-size: 14px;
+    color: #3498db;
+    font-weight: 500;
+  }
+}
+
+// Mobile Responsive
+@media (max-width: 768px) {
+  .resume-page {
+    margin: 0 15px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .resume-header {
+    padding: 30px 20px;
+
+    .profile-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .profile-image .avatar-placeholder {
+      width: 100px;
+      height: 100px;
+      font-size: 28px;
+    }
+
+    .profile-info .name {
+      font-size: 28px;
+    }
+
+    .contact-links {
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+
+  .resume-content {
+    padding: 30px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-header {
+    .company,
+    .duration {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+
+  .education-header {
+    .school,
+    .duration {
+      display: block;
+      margin: 5px 0;
+    }
+  }
+}
+
+// Print Styles
+@media print {
+  .resume-page {
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .resume-header {
+    background: #3498db !important;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  .skill-tag:hover,
+  .certification-item:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
 
